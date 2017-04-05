@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="app">  
+
+    <head>  
+        <title>Image Cropper Test</title>
+        
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> 
+        <script src="ImageCrop/angular-file-reader.js"></script>
+         <script src="ImageCrop/angular-image-crop.js"></script>
+         
+
+         <script src="script.js"> </script>
+    </head>
+
+    <body ng-controller="MainCtrl as main">
+         <div>
+      <h3>First, choose a file</h3>
+      <input type="file" simple-change="main.fileChanged($event)" accept="image/*">
+    </div>
+    
+    <div>
+      <h3>Then, crop it</h3>
+      <canvas class="cropper" width="300" height="300" tw-cropper="cropper" source="main.file"></canvas>
+    </div>
+    
+    <div ng-show="main.file">
+      <h3>When you're done, use it</h3>
+      <button ng-click="crop = cropper.toDataURL()">Save</button>
+    </div>
+    
+    <div ng-show="crop">
+      <h3>Result:</h3>
+      <img ng-src="{{crop}}">
+    </div>
+        
+        
+
+
+    </body>
+
+</html>
