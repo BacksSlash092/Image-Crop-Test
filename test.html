@@ -1,9 +1,11 @@
 <!doctype html>
-<html ng-app="app">  
+<html>  
 
     <head>  
         <title>Image Cropper Test</title>
-        <style>
+        <link href="materialize.css" rel="stylesheet" >        
+
+    <style>
 
           /*.input-field label.active{
     color: red;
@@ -111,35 +113,28 @@ ul.dropdown-content.select-dropdown li span {
 
         </style>
     
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> 
-        <script src="ImageCrop/angular-file-reader.js"></script>
-         <script src="ImageCrop/angular-image-crop.js"></script>
+ 
          
 
-         <script src="script.js"> </script>
     </head>
 
-    <body ng-controller="MainCtrl as main">
-         <div>
-      <h3>First, choose a file</h3>
-      <input type="file" simple-change="main.fileChanged($event)" accept="image/*">
-    </div>
-    
-    <div id="fileDisplayArea">
-   
-      <canvas class="cropper" width="300" height="300" tw-cropper="cropper" source="main.file"></canvas>
-    </div>
-    
-    <div ng-show="main.file">
-      <h3>When you're done, use it</h3>
-      <button ng-click="crop = cropper.toDataURL()">Save</button>
-    </div>
-    
-    <div ng-show="crop">
-      <h3>Result:</h3>
-      <img id="logo" ng-src="{{crop}}">
-    </div>
+    <body>
         
+       <h1>This is a <span style="color:red;">SASS</span> TEST</h1> 
+
+         <p>
+    <input class="with-gap" name="group3" type="radio" id="test5" checked />
+    <label for="test5">Red</label>
+  </p>
+
+
+     <p>
+      <input type="checkbox" id="test5" />
+      <label for="test5">Red</label>
+    </p>
+        
+
+<h4> <span style="color:red;">yes</span> it works and it's awesome</h4>
         
 
 
